@@ -1,13 +1,11 @@
-
 //Directives pointing to template info 
-
 app.directive('appInfo', function() { 
   return { 
     restrict: 'E', 
     scope: { 
       info: '=' 
     }, 
-    templateUrl: 'js/directives/appInfo.html' 
+    templateUrl: 'js/directives/friendInfo.html' 
   }; 
 });
 
@@ -16,7 +14,7 @@ app.directive('installApp', function() {
   return {
     restrict: 'E',
     scope: {},
-    templateUrl: 'js/directives/installApp.html',
+    templateUrl: 'js/directives/friendLink.html',
     
     link: function(scope, element, attrs) {
       scope.buttonText = "Install",

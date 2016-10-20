@@ -1,0 +1,110 @@
+
+body{
+	
+}
+
+
+.profile-gallery{
+	margin-top:100px;
+}
+
+.friend{
+	border:2px solid #777; 
+    margin: 5px; 
+    box-shadow: 10px 10px 5px #888888;
+    opacity: 1;
+    animation: fade .4s linear;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.id{
+	color:#000;
+	font-style:italic;
+	padding:3px;
+    font-size:1.2em; 
+    margin:2px;     
+}
+.name{
+    padding:3px; 
+    font-size:.75em; 
+    margin:2px; 
+}
+.age{
+	padding:3px;
+    font-size:.75em;
+    margin:2px; 
+}
+
+.gender{
+	padding:3px;
+    font-size:.75em;
+    margin:2px; 
+}
+
+.photo {
+    margin: 0 auto; 
+    text-align: center;
+	height:125px; 
+	width:125px; 
+}
+
+.favAnime{
+	padding:5px;
+    font-size:.75em; 
+}
+
+.favWeapon{
+	padding:5px;
+    font-size:.75em; 
+}
+
+.twitter-heart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 88%;
+  top: 15px ;
+  transform: translate(-50%, -50%);
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+}
+.twitter-heart:hover {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
+
+
+@media screen and (max-width:768px){
+	
+	.friend{
+		margin: 0 25px;
+		text-align:center;
+        font-size:1.5em;
+        margin-bottom: 25px;
+
+	}
+
+	.photo{
+		margin: 0 auto;
+		text-align:center;
+		height:200px;
+		width:200px;
+	}
+}
+
+
+
