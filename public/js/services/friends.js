@@ -1,5 +1,5 @@
 
-//Declare a new factory friends to use for get request of hte match data 
+//Declare a new factory members to use for get request of hte match data 
 app.factory('friends', ['$http', function($http) { 
 
   return $http.get('http://localhost:3000/api/all') 

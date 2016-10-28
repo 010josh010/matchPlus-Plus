@@ -1,0 +1,35 @@
+{
+  "name": "animatchplus",
+  "version": "1.0.0",
+  "description": "anime speed dating ",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/010josh010/matchPlus-Plus.git"
+  },
+  "keywords": [
+    "node",
+    "angular",
+    "anime",
+    "dating"
+  ],
+  "author": "010josh010",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/010josh010/matchPlus-Plus/issues"
+  },
+  "homepage": "https://github.com/010josh010/matchPlus-Plus#readme",
+    
+    "dependencies":{
+     "body-parser": "^1.15.2",
+    "cleverbot.io": "^1.0.4",
+    "path": "^0.12.7", 
+    "express": "^4.14.0"
+    }
+    
+    
+}

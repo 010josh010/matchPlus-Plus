@@ -2,95 +2,213 @@
  <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--- reset css --> 
+    <link rel="stylesheet" href="css/reset.css"/> 
 
    <!-- twitter bootstrap cdn --> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+ <!--- navbar css --> 
+ <link rel="stylesheet" href="css/navbar.css"/> 
 
-    
-    <!--- anidate stylesheet --> 
-  <link href="css/main.css" rel="stylesheet" />
+ <!--- main css --> 
+ <link rel="stylesheet" href="css/main.css"/> 
+ 
   </head>
-    
-    <div class="container"> 
+
+<body> 
+   
+     <!-- Navbar  "fa fa-fw fa-thumbs-o-up" --> 
+  <nav class="navbar navbar-findcond navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:3000/">animatch++</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+     
+      <form class="navbar-form navbar-right search-form" role="search">
+        <input type="text" class="form-control" placeholder="Search" />
+      </form>
+    </div>
+  </div>
+</nav>
+<!--- end nav --> 
+   
+   <!--- signup form *****************--> 
       
-      <div id = "banner" class ="row"> 
-              <h1> Match++ </h1> 
+    <div class="signup-container">
+          <div id = "banner" class ="row" style="height:150px"> 
+            <h1> <span>Get started!</span> </h1> 
+            <h2> Create your profile today</h2> 
+            </div> 
 
-              <h2> Create a profile today </h2> 
+         <form class="signup" action="/signup/new/" method="POST">
+            <!---User id --> 
+             <div class="form-group">
+              <label for="Id"> User Id</label>
+              <input type="text" class="form-control" name="Id" aria-describedby="User Id" placeholder="Enter user id" required>
+            </div>
+                <!--- Name --> 
+             <div class="form-group">
+              <label for="">Name</label>
+              <input type="text" class="form-control" name="name" aria-describedby="Name" placeholder="Enter your name" required>
+            </div>
+             
+                 <!--- email --> 
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                      <input type="email" class="form-control" name="email" aria-describedby="email" placeholder="Enter email" required>
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+              
+              <!---Photo--> 
+            <div class="form-group">
+              <label for="">Photo Url</label>
+              <input type="text" class="form-control" name="photo" aria-describedby="Name" placeholder="Enter your photos Url" required>
+            </div>
+               
+               <!--- Age --> 
+             <div class="form-group">
+              <label for="age">Age</label>
+              <input type="text" class="form-control" name="age" aria-describedby="age" placeholder="Enter your age" required>
+            </div>
+                
+          
+                <!--- password--> 
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="Password" required>
+                </div>
+                
 
-
-              <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleSelect1">Example select</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleTextarea">Example textarea</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-  </div>
-  <fieldset class="form-group">
-    <legend>Radio buttons</legend>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        Option one is this and that&mdash;be sure to include why it's great
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-        Option two can be something else and selecting it will deselect option one
-      </label>
-    </div>
-    <div class="form-check disabled">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-        Option three is disabled
-      </label>
-    </div>
-  </fieldset>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-      </div>
-
-    </div>
+                <!---Gender Select --> 
+                <fieldset class="form-group">
+                  <legend>Gender</legend>
+                  <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="gender" value="Male" required>&nbsp; Male</label>
+                  </div>
+                  
+                  <div class="form-check">
+                  <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="Female">&nbsp; Female</label>
+                  </div>
+                </fieldset>
+                
+                <!---Favorite Anime --> 
+             <div class="form-group">
+                  <label for="favAnime">What is your favorite anime</label>
+                  <input type="text" class="form-control" name="favAnime" aria-describedby="Favorite Anime" placeholder="???" required>
+            </div>
+                
+           
+                <!---Favorite Weapon --> 
+                <div class="form-group">
+                  <label for="favWeapon">Choose a Weapon</label>
+                  <select multiple class="form-control" name="favWeapon" required>
+                     <option>Sythe</option>
+                     <option>Assault Rifle</option>
+                     <option>Knife</option>
+                     <options>Handgun</options>
+                     <option>Magic</option>
+                     <option>Railgun</option>
+                     <option>Sword</option>
+                     <option>Martial Arts</option>
+                     <option>Knowlege</option>
+                  </select>
+                </div>
+                
+                <!---Anime Preference--> 
+                <div class="form-group">
+                  <label for="animePref">Choose an anime</label>
+                  <select multiple class="form-control" name="animePref" required>
+                     <option>Bleach</option>
+                      <option>Clannad</option>
+                      <option>Code Geass</option>
+                      <option>Another</option>
+                      <option>Fushigi Yuugi</option>
+                      <option>FLCL</option>
+                  </select>
+                </div>
+                
+           
+                 <!--- Dere--> 
+                <div class="form-group">
+                  <label for="dere">You are a ?</label>
+                  <select class="form-control" name="dere" required>
+                    <option>Dandere</option>
+                    <option>Tsundere</option>
+                    <option>Kuudere</option>
+                    <option>Yandere</option>
+                  </select>
+                </div>
+                
+                   <!--- Favorite Dere--> 
+                <div class="form-group">
+                  <label for="favDere">Seeking a ?</label>
+                  <select class="form-control" name="favDere" required>
+                     <option>Tsundere</option>
+                     <option>Kuudere</option>
+                     <option>Dandere</option>
+                     <option>Yandere</option>
+                  </select>
+                </div>
+                
+                 <!---Question 1 --> 
+                <div class="form-group">
+                  <label for="q1">kieru hikoukigumo ?</label>
+                  <select class="form-control" name="q1" required>
+                     <option>Yes</option>
+                     <option>No</option>
+                     <option>Huh?</option>
+                     <option>bokutachi wa miokutta</option>
+                  </select>
+                </div>
+                
+                
+                   <!---Question 2 --> 
+                <div class="form-group">
+                  <label for="q2">Which of these would you consider youself to be?</label>
+                  <select multiple class="form-control" name="q2" required>
+                     <option>Humanitarian</option>
+                     <option>Warrior</option>
+                     <option>Musician</option>
+                     <option>Gamer</option>
+                     <option>Bookworm</option>
+                     <option>Space Cowboy</option>
+                     <option>Artist</option>
+                     <option>Alien</option>
+                  </select>
+                </div>
+                
+                <!---Question 3 --> 
+                
+                    <!---Question 2 --> 
+                <div class="form-group">
+                  <label for="q3">Would you say that you are a people person</label>
+                  <select class="form-control" name="q3" required>
+                     <option>Agree</option>
+                     <option>Strongly Agree</option>
+                     <option>Not sure</option>
+                     <option>Disagree</option>
+                     <option>Strongly Disagree</option>
+             
+             
+                  </select>
+                </div>
+            
     
+                <button type="submit" class="btn btn-home">Submit</button>
+            </form>
+        </div>
+              
     <!--Jquery Library from google --> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     
